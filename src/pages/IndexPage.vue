@@ -83,11 +83,12 @@
                 v-for="(position, index) in experience"
                 :key="`item-${index}`"
               >
-                <span class="resumeNormal">{{ position["company"] }}</span> <span class="resume location">({{ position["location"] }})</span><br/>
-                <span class="resume">{{ position["jobTitle"] }}</span>
-                (<span class="resume">{{ months[position["monthStart"]-1] }} {{ position["yearStart"] }} </span> -
+                <span class="resumeNormal">{{ position["company"] }}</span><br />
+                <span class="resume">{{ position["jobTitle"] }}</span><br />
+                <span class="resume">{{ position["location"] }}</span> :
+                <span class="resume">{{ months[position["monthStart"]-1] }} {{ position["yearStart"] }} </span> -
                   <span v-if="!position['isCurrent']" class="resume">{{ months[position["monthEnd"]-1] }} {{ position["yearEnd"] }} </span>
-                  <span v-if="position['isCurrent']" class="resume">Present</span>)
+                  <span v-if="position['isCurrent']" class="resume">Present</span>
                   <br/>
 
 

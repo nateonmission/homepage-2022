@@ -363,6 +363,14 @@ p.copyright {
 }
 
 @media only screen and (max-width: 1150px) {
+  html,
+  body {
+    text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+  }
+
   * {
     font-size: 1rem;
   }
@@ -429,8 +437,12 @@ p.copyright {
     justify-content: center;
   }
 
+  span.resume {
+    font-size: large;
+  }
+
   .exp_item {
-    font-size: 0.5rem;
+    font-size: 1rem;
   }
 
   .resume_header {
