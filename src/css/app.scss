@@ -138,14 +138,6 @@ ul.resume {
   margin: 0.25rem;
 }
 
-.normalSkill {
-  // font-family: "Roboto Slab", serif;
-  // font-size: 0.75rem;
-  // text-shadow: none;
-  // margin: 0;
-  // padding: 0;
-}
-
 span.resume {
   font-family: "Roboto Slab", serif;
   font-size: 0.6rem;
@@ -160,26 +152,10 @@ span.resume {
   width: 20rem;
 }
 
-.resume_label {
-  // color: $dark;
-  // font-size: small;
-}
-
-.resume_header_inner {
-  // color: $dark;
-  // border-radius: 1rem;
-  // margin: 1rem;
-}
-
 .resume_content {
   background-color: $lightbg;
   color: $accent;
   // list-style: none;
-}
-
-li.resume {
-  // list-style-image: url("/public//icons/atom_06.svg");
-  // list-style: url("/public/imgs/rocket.svg");
 }
 
 .skillContainer UL > LI {
