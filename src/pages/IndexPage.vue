@@ -85,7 +85,7 @@
               >
                 <span class="resumeNormal">{{ position["company"] }}</span><br />
                 <span class="resume">{{ position["jobTitle"] }}</span><br />
-                <span class="resume">{{ position["location"] }}</span> :
+                <span class="resume">{{ position["location"] }}</span><br/>
                 <span class="resume">{{ months[position["monthStart"]-1] }} {{ position["yearStart"] }} </span> -
                   <span v-if="!position['isCurrent']" class="resume">{{ months[position["monthEnd"]-1] }} {{ position["yearEnd"] }} </span>
                   <span v-if="position['isCurrent']" class="resume">Present</span>
