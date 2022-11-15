@@ -2,7 +2,7 @@
   <q-page class="flex column justify-between" :style-fn="myTweek">
     <div class="wrapper">
       <div class="who">
-        <div class="avatar">
+        <div class="avatarDiv">
           <img
             src="../../public/icons/atom_09.svg"
             alt="gooky starburt"
@@ -39,7 +39,7 @@
           class="resume_header shadow-3 overflow-hidden"
           icon="psychology"
           label="Skills"
-          header-class="text-dark "
+          header-class="text-dark exp_item"
           expand-icon-class="text-dark"
         >
           <q-card>
@@ -83,7 +83,7 @@
                 v-for="(position, index) in experience"
                 :key="`item-${index}`"
               >
-                <span class="resumeNormal">{{ position["company"] }}</span> (<span class="resume">{{ position["location"] }}</span>)<br/>
+                <span class="resumeNormal">{{ position["company"] }}</span> <span class="resume location">({{ position["location"] }})</span><br/>
                 <span class="resume">{{ position["jobTitle"] }}</span>
                 (<span class="resume">{{ months[position["monthStart"]-1] }} {{ position["yearStart"] }} </span> -
                   <span v-if="!position['isCurrent']" class="resume">{{ months[position["monthEnd"]-1] }} {{ position["yearEnd"] }} </span>
@@ -274,7 +274,7 @@
       </div>
 
       <div class="copyright">
-        &#169; {{ new Date().getFullYear() }} &nbsp; J. Nathan Allen
+        <p class="copyright">&#169;&nbsp;{{ new Date().getFullYear() }}</p><p class="copyright">J.&nbsp;Nathan&nbsp;Allen</p>
       </div>
     </div>
   </q-page>
