@@ -164,6 +164,16 @@ span.resume {
   list-style: url("../../public/imgs/rocket.svg");
 }
 
+div.ul-container {
+  margin: 0.5rem 0.5rem;
+  padding: 0 0 0.2rem 0;
+  list-style: url("../../public/imgs/rocket.svg");
+}
+
+.dot {
+  list-style: circle;
+}
+
 .skillContainer LI:first-child:before {
   // display: inline-block;
   // margin: 0rem 0.5rem;
@@ -228,11 +238,31 @@ div.intro img {
 
 p.intro {
   // padding: 0rem 5rem 0 0;
-  display: flex;
-  flex-direction: row;
+  // display: flex;
+  // flex-direction: row;
   font-size: large;
   color: $text;
   margin: 1rem;
+}
+
+a.intro {
+  // padding: 0rem 5rem 0 0;
+  // text-decoration: none;
+  text-shadow: none;
+  font-size: inherit;
+  // display: inline;
+  color: $text;
+  font-family: inherit; //"Roboto Slab", serif;
+}
+
+a.intro:hover {
+  // padding: 0rem 5rem 0 0;
+  // text-decoration: none;
+  text-shadow: none;
+  // display: inline;
+  color: $accent;
+
+  font-family: "Roboto Slab", serif;
 }
 
 .slackey_emphisis {
@@ -254,7 +284,7 @@ p.intro {
 
 div.social {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: baseline;
   flex-direction: row;
   font-family: "Yellowtail", cursive;
@@ -262,12 +292,39 @@ div.social {
   text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
     -1px 1px 0 #000, 1px 1px 0 #000;
 
+  // background-color: $accent;
+  color: $primary;
+  // border: 1px $lightbg solid;
+  // min-width: 50%;
+
+  // align-self: center;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-items: space-between;
+  flex-flow: row wrap;
+
+  font-size: 1.25rem;
+  color: $primary;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 1px 1px 0 #000;
+
   background-color: $accent;
   color: $primary;
-  border-bottom: 1px $lightbg solid;
-  min-width: 50%;
+  border-radius: 1rem;
+  width: 95%;
 
   align-self: center;
+  padding: 0; //1rem;
+  border: 1px $lightbg solid;
+  overflow: hidden;
+}
+
+div.social {
+  margin: 0.2rem 0.5rem;
 }
 
 div.social a {
@@ -291,47 +348,26 @@ img.social:hover {
     brightness(103%) contrast(100%) drop-shadow(3px 3px 0 #000);
 }
 
-.footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-
-  font-size: 1.25rem;
-  color: $primary;
-  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
-    -1px 1px 0 #000, 1px 1px 0 #000;
-
-  background-color: $accent;
-  color: $primary;
-  border-radius: 1rem;
-  width: 95%;
-
-  align-self: center;
-  padding: 0 1rem;
-  border: 1px $lightbg solid;
-}
-
-.copyright {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  margin: 0 auto;
-  align-self: center;
-  padding: 0 1rem 0.5rem 1rem;
+div.copyright {
+  // display: flex;
+  // justify-content: center;
+  // flex-direction: row;
+  margin: 0.7rem 1rem;
+  // align-self: center;
+  // padding: 0 1rem 0.5rem 1rem;
+  // border: 1px black solid;
+  // align-self: flex-start;
 }
 
 p.copyright {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: $primary;
-  margin: 0 auto;
+  margin: auto;
   text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
     -1px 1px 0 #000, 1px 1px 0 #000;
 
-  align-self: center;
-  padding: 0 1rem 0.5rem 1rem;
+  // align-self: center;
+  // margin: 0 0 -1rem 0;
 }
 
 .q-page {
@@ -413,6 +449,10 @@ p.copyright {
     justify-content: center;
   }
 
+  .normal {
+    font-size: 1rem;
+  }
+
   span.resume {
     font-size: large;
   }
@@ -453,7 +493,20 @@ p.copyright {
     font-size: 0.5rem;
   }
 
-  .copyright {
+  div.footer {
     flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  div.social {
+    justify-content: center;
+    justify-items: center;
+  }
+  div.copyright {
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-self: center;
   }
 }
